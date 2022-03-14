@@ -1,0 +1,296 @@
+
+body {
+    font-family: $font-family;
+    font-size:1em;
+    line-height:(1em * 2);
+    @include backImage('../images/bg.gif');
+    background-repeat: repeat-x;
+    margin:0;
+}
+    main {
+        width:940px;
+        margin: 0 auto;
+        padding:0 10px;
+        @include break(0, 495px) {
+            width:300px;
+            }
+        @include break(496px, 767px){
+            width: 460px;
+        }
+        @include break(768px, 959px) {
+            width:768px;
+        }
+        }
+        
+        figure {
+        width:400px;
+        height:190px;
+        @include backImage('../images/logo.png');
+        background-repeat: no-repeat;
+        background-position: 0 50px;
+        float:left;
+        display:block;
+        margin:0;
+        @include break(0, 495px) {
+            float:none;
+            background-size: auto;
+            height:130px;
+            background-position: 0;
+        }
+        @include break(496px, 767px) {
+            float:none;
+            background-size: auto;
+            height:130px;
+            background-position: 0;
+        }
+        @include break(768px, 959px) {
+            width:inherit;
+            height:140px;
+            float:none;
+            background-position:center;
+        }
+        }
+        
+        header {
+            width:inherit;
+            clear:both;
+            text-align:center;
+            padding-top:40px;
+            
+            img {
+                max-width:100%;
+                height:auto;
+                @include break(0, 495px) {
+                    margin-bottom:40px;
+                }
+                @include break(496px, 767px){
+                    margin-bottom:40px;
+                }
+            }
+
+            h1 {
+                color: $linkH1-color;
+                font-weight:100;
+                font-size:4em;
+                line-height:0; 
+                @include break(0, 495px) {
+                    font-size:1.4em;
+                    margin-bottom:20px;
+                }
+                @include break(496px, 767px){
+                    font-size:2em;
+                }
+                @include break(768px, 959px) {
+                    font-size:3em;
+                }
+                }
+            h2 {
+                color: $backgroundH2-color;
+                font-weight:900;
+                font-size:2.5em;
+                line-height:0;
+                margin-bottom:70px;
+                @include break(0, 495px) {
+                    font-size:1.4em;
+                }
+                @include break(496px, 767px){
+                    font-size:1em;
+                }
+                @include break(768px, 959px) {
+                    font-size:1.5em;
+                }
+                }
+            h3 {
+                color: $h3-color;
+                font-weight:400;
+                font-size:2em;
+                line-height:0;
+                margin-bottom:50px;
+                @include break(0, 495px) {
+                    color:#FFF;
+                    font-size:1em;
+                }
+                @include break(496px, 767px){
+                    font-size:1.5em;
+                }
+                }
+            }
+        
+        
+#headline { 
+    width: 100%;
+    height: 130px;
+    background: $linkH1-color;
+    text-align: center;
+    margin: 0 auto;
+   
+    h1 {
+        color: $backgroundH2-color;
+        font-size:2.5em;
+        font-weight:100;
+        padding-top:50px;
+        @include break(0, 495px) {
+            font-size:1.5em;
+            padding-top:30px;
+        }
+        @include break(496px, 767px){
+            font-size:2em;
+            padding-top:50px;
+        }
+        }
+    }
+    
+
+#content {
+    width:940px;
+    margin:20px auto;
+    @include break(0, 495px) {
+        width:300px;
+        margin-left: 10px;
+        text-align: center;
+        }
+    @include break(496px, 767px){
+        width: 460px;
+    }
+    @include break(768px, 959px) {
+        width:768px;
+    }
+    // @include break(768px, 959px) {
+    //     width:inherit;
+    // }
+    h3 {
+        color: $h3-color;
+        font-size:2em;
+        font-weight:400;
+        @include break(0, 495px) {
+            font-size:1.6em;
+        }
+    }
+    #products {
+        width:460px;
+        float:left;
+        @include break(0, 495px) {
+            float:none;
+        }
+        @include break(496px, 767px){
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
+        @include break(768px, 959px) {
+            width:46%;
+            margin:0 2%;
+        }
+        // img {
+        //     float:left;
+        //     margin-right:20px;
+        // }
+        article {
+                margin-bottom:40px;
+                img {
+                float:left;
+                margin-right:20px;
+                @include break(0, 495px) {
+                    display:none;
+    
+                }
+            }
+        }
+        h4 {
+            line-height:1em;
+        }
+    }
+    #testimonials {
+        width:460px;
+        float:right;
+        @include break(0, 495px) {
+            float:none;
+            // width: 100%;
+        }
+        @include break(496px, 767px){
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
+        @include break(768px, 959px) {
+            width:46%;
+            margin:0 2%;
+        }
+    }
+}
+
+.greybar {
+    width:100%;
+    height:90px;
+    background:#F5F6F6;
+    clear:both;
+    padding-top:30px;
+    @include break(0, 495px) {
+        display:none;
+    }
+}
+footer {
+    clear:both;
+    width:100%;
+    height:120px;
+    background:#30353D;
+    text-align:center;
+    color: $backgroundH2-color;
+    padding-top:50px;
+    @include break(0, 495px) {
+        text-align:center;
+    }
+
+
+    footer p, footer img {
+        @include break(0, 495px) {
+        float:none;
+        margin:0;
+    }
+}
+    
+select {
+    @include break(0, 495px) {
+    width:95%;
+            }
+        }
+        
+.social-media {
+        margin:0 auto;
+        width:165px;
+
+        div {
+            float:left;
+            margin-right:5px;
+        }
+        a {
+            display:block;
+            width:36px;
+            height:36px;
+            text-indent:-9999px;
+        }
+    
+        .one {
+                @include backImage('../images/social-media.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+        .two {
+                @include backImage('../images/social-media.png');
+                background-repeat: no-repeat;
+                background-position: -38px 0;
+            }
+        .three{
+                @include backImage("../images/social-media.png");
+                background-repeat: no-repeat;
+                background-position: -76px 0;
+            }
+        .four {
+                @include backImage("../images/social-media.png");
+                background-repeat: no-repeat;
+                background-position: -114px 0;
+            }
+}
+
+}
+
